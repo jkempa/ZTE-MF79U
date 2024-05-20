@@ -159,11 +159,9 @@ if __name__ == '__main__':
 
 
     AD = generate_AD(info_dict['wa_inner_version'], info_dict['cr_version'], info_dict['RD'])
-    print("AD:", AD)
-
+    logger.info(f"AD: {AD}")
 
     unicode_str = "Hello, this is a test message: 你好世界!"
-
     phone_number = "0123456789"
 
     send_sms(cookies, phone_number, prepare_sms_text(unicode_str), AD)
